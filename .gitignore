@@ -39,3 +39,6 @@ build/
 
 mics.xml
 vsc,xml
+
+.idea/
+.idea/**
