@@ -31,7 +31,7 @@ public class EncryptionVerticle extends AbstractVerticle {
 
     this.algorithm = config().getString("ALGORITHM");
     this.key = DatatypeConverter.parseHexBinary(config().getString("ENCRYPTION_KEY"));
-    this.key = DatatypeConverter.parseHexBinary(config().getString("ENCRYPTION_IV"));
+    this.iv = DatatypeConverter.parseHexBinary(config().getString("ENCRYPTION_IV"));
 
     try {
       cipher = Cipher.getInstance(config().getString("TRN"), BouncyCastleProvider.PROVIDER_NAME);
