@@ -15,7 +15,7 @@ public class Main {
   private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
   public static void main(String[] args) {
-    PropertyConfigurator.configure(Main.class.getClassLoader().getResourceAsStream("log4j2.properties"));
+    PropertyConfigurator.configure(Main.class.getClassLoader().getResource("log4j2.properties"));
     System.setProperty("vertx.logger-delegate-factory-class-name", "io.vertx.core.logging.SLF4JLogDelegateFactory");
     Security.addProvider(new BouncyCastleProvider());
     final var vertx = Vertx.vertx();
